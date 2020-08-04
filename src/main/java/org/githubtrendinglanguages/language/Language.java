@@ -13,6 +13,6 @@ import lombok.Setter;
 @Data @AllArgsConstructor @NoArgsConstructor @Getter @Setter
 public class Language {
 	private String name;
-	private int numbrRepos;
+	private int numberRepos;
 	private ArrayList<String> reposUrls;
 }
