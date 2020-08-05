@@ -1,6 +1,7 @@
 package org.githubtrendinglanguages.language;
 
-import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,7 +14,7 @@ public class LanguageController {
 	LanguageService languageService;
 
 	@RequestMapping(value = "languages", method = RequestMethod.GET)
-	public HashMap<String, Language> getTopLanguages() {
+	public Map<String, Language> getTopLanguages() {
 		return languageService.callGithubAPI();
 	}
 }

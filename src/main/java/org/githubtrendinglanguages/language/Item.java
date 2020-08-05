@@ -8,14 +8,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/** igonre undefined propreties while parsing JSON to Item */
+/** igonre undefined propreties when parsing JSON to Item */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @EntityScan
-@Data @AllArgsConstructor @NoArgsConstructor @Getter @Setter
+@Data @NoArgsConstructor @AllArgsConstructor @Getter @Setter
 /** Item class represents repositorie */
 public class Item {
 	private String name; /** repositorie name */
 	private String html_url;
 	private String language;
+
+	public void replaceNullLanguage() {
+		if(language == null) language = "unknown"; 
+	}
+	
+	
 }
 

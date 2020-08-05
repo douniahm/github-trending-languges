@@ -10,7 +10,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/*** igonre undefined propreties while parsing json to APIResult**/
+/*** igonre undefined propreties when parsing json to APIResult**/
 @JsonIgnoreProperties(ignoreUnknown = true)
 @EntityScan
 @Data @AllArgsConstructor @NoArgsConstructor @Getter @Setter

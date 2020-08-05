@@ -12,6 +12,15 @@ import lombok.Setter;
 @Data @AllArgsConstructor @NoArgsConstructor @Getter @Setter
 public class Language {
 	private String name;
-	private int numberRepos;
-	private LinkedList<String> reposUrls;
+	private int numberRepos = 0;
+	private LinkedList<String> reposUrls = new LinkedList<String>();
+	
+	public Language(String name, String HTMLUrl) {
+		this.name = name;
+		this.addRepoUrl(HTMLUrl);
+	}
+	public void addRepoUrl(String repoUrl) {
+		this.reposUrls.add(repoUrl);
+		this.numberRepos ++;
+	}
 }
