@@ -1,9 +1,7 @@
 package org.githubtrendinglanguages.language;
 
-import java.util.List;
-
+import java.util.ArrayList;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
@@ -17,5 +15,5 @@ import lombok.Setter;
 @EntityScan
 @Data @AllArgsConstructor @NoArgsConstructor @Getter @Setter
 public class APIResult {
-	private List<Item> items;
+	private ArrayList<Item> items;
 }

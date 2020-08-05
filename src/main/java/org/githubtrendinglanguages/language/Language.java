@@ -1,7 +1,6 @@
 package org.githubtrendinglanguages.language;
 
-import java.util.ArrayList;
-
+import java.util.LinkedList;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,5 +13,5 @@ import lombok.Setter;
 public class Language {
 	private String name;
 	private int numberRepos;
-	private ArrayList<String> reposUrls;
+	private LinkedList<String> reposUrls;
 }
