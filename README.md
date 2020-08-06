@@ -1,7 +1,7 @@
 # github-trending-languges
-***This is my solution to Gemography backend coding challenge.***
-The application is a REST microservice that lists languages used in the 100 trending github repositories.
-It fetches Github API: https://api.github.com/search/repositories?q=created:>{date}&sort=stars&order=desc
+***This is my solution to Gemography backend coding challenge.*** <br />
+The application is a REST microservice that lists languages used in the 100 trending github repositories.<br />
+It fetches Github API: https://api.github.com/search/repositories?q=created:>{date}&sort=stars&order=desc <br />
 The result is a JSON listing trending languages as follow:
   - Language name
     - Number of repositories using this language
