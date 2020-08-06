@@ -31,7 +31,7 @@ public class LanguageService {
 	public HashMap<String, Language> callGithubAPI() {
 		ResponseEntity<APIResult> result = restTemplate.exchange(this.GITHUB_API_URL, HttpMethod.GET, null,
 				APIResult.class);
-		return getTrendingLanguages(result.getBody().getItems());
+		return groupItemsByLanguage(result.getBody().getItems());
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class LanguageService {
 	 * @param repositories: top 100 repositories
 	 * @return Hashmap of languages used in repositories
 	 */
-	private HashMap<String, Language> getTrendingLanguages(ArrayList<Item> repositories) {
+	private HashMap<String, Language> groupItemsByLanguage(ArrayList<Item> repositories) {
 		HashMap<String, Language> languages = new HashMap<String, Language>();
 
 		repositories.forEach(repositorie -> {

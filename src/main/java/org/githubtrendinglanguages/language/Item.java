@@ -21,7 +21,5 @@ public class Item {
 	public void replaceNullLanguage() {
 		if(language == null) language = "unknown"; 
 	}
-	
-	
 }
 
