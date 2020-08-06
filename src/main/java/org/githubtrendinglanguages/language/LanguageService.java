@@ -50,16 +50,20 @@ public class LanguageService {
 	 */
 	private HashMap<String, Language> groupItemsByLanguage(ArrayList<Item> repositories) {
 		HashMap<String, Language> languages = new HashMap<String, Language>();
+		StringBuilder languageName = new StringBuilder();
 
 		repositories.forEach(repositorie -> {
 			repositorie.replaceNullLanguage();
+			languageName.setLength(0);
+			languageName.append(repositorie.getLanguage());
+			
 			/** case 1: language already added */
-			if (languages.containsKey(repositorie.getLanguage())) {
-				languages.get(repositorie.getLanguage()).addRepoUrl((repositorie.getHtml_url()));
+			if (languages.containsKey(languageName.toString())) {
+				languages.get(languageName.toString()).addRepoUrl((repositorie.getHtml_url()));
 			} else {
 				/** case 2: language isn't added yet */
-				Language language = new Language(repositorie.getLanguage(), repositorie.getHtml_url());
-				languages.put(repositorie.getLanguage(), language);
+				Language language = new Language(languageName.toString(), repositorie.getHtml_url());
+				languages.put(languageName.toString(), language);
 			}
 		});
 		return languages;
