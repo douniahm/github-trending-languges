@@ -1,11 +1,11 @@
 # github-trending-languges
 ***This is my solution to Gemography backend coding challenge.*** <br />
-The application is a REST microservice that lists languages used in the 100 trending github repositories.<br />
+The application is a REST microservice that lists languages used in the 100 trending github repositories for the last 30 days.<br />
 It fetches Github API: https://api.github.com/search/repositories?q=created:>{date}&sort=stars&order=desc <br />
 The result is a JSON listing trending languages as follow:
   - Language name
     - Number of repositories using this language
-    - The list of repositories using the language
+    - The list of repositories using this language
  
 ## Getting Started
 ### Prerequisites
@@ -14,7 +14,7 @@ The result is a JSON listing trending languages as follow:
 - Spring 2.3.2
 
 ### Running the application with Maven
-- clone repository, compile and run:
+- Clone repository, compile and run:
 ```
 git clone https://github.com/douniahm/github-trending-languages
 cd github-trending-languages
@@ -26,7 +26,7 @@ java -jar target/github-trending-languages-0.0.1-SNAPSHOT.jar
 http://localhost:8080/api/languages
 ```
 ### Running the application using Docker
-- Pull docker image from dockerhub:
+- Pull Docker image from dockerhub:
 ```
 docker pull douniahm/github-trending-languages
 ```
@@ -41,5 +41,5 @@ docker pull douniahm/github-trending-languages
 - Eclipse IDE
 - Docker
 
-## Autor
+## Author
 - Dounia AIT HAMMI
